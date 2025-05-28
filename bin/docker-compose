@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Se crea este archivo con la finalidad de dar soporte a las versiones de docker composer 1 y 2
+# desde la version de ubuntu 24 ya no se puede instalar docker composer 1
+
+#Este batch evalua la version de docker compose instalada y ejecuta el comando segun la version correspondiente
+
+# Comprobar si docker-compose está instalado y ejecuta el comando para docker-composer version 1
+if command -v docker-compose &> /dev/null; then
+    echo "docker-compose"
+    docker-compose $@
+else
+    # Comprobar si docker compose está instalado y ejecuta el comando para docker composer version 2
+    if command -v docker &> /dev/null && docker compose version &> /dev/null; then
+        echo "docker compose"
+        docker compose $@
+    else
+        echo "No exite ninguna version de docker compose instalada en el equipo"
+    fi
+fi

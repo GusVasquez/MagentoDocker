@@ -1,10 +1,10 @@
 #!/bin/bash
 
-VERSION=${1:-2.4.3-p1}
-EDITION=${2:-community}
+VERSION=${1:-2.4.6}
+EDITION=${2:-enterprise}
 
 #bin/stop
-#docker-compose -f docker-compose.yml up -d
+#./bin/docker-compose -f ./bin/docker-compose.yml up -d
 #[ $? != 0 ] && echo "Fallo al iniciar contenedores Docker" && exit
 
 bin/setup-composer-auth

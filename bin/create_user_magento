@@ -14,6 +14,6 @@ case $CONFIG_USER in
         read USER_FIRSTNAME
         echo "$USER_NAME lastname: "
         read USER_LASTNAME
-        docker-compose exec -T phpfpm bin/magento admin:user:create --admin-user=$USER_NAME --admin-password=$USER_PASSWORD --admin-email=$USER_EMAIL --admin-firstname=$USER_FIRSTNAME --admin-lastname=$USER_LASTNAME
+        ./bin/docker-compose exec -T phpfpm bin/magento admin:user:create --admin-user=$USER_NAME --admin-password=$USER_PASSWORD --admin-email=$USER_EMAIL --admin-firstname=$USER_FIRSTNAME --admin-lastname=$USER_LASTNAME
         ;;
 esac

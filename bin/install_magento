@@ -9,7 +9,7 @@ source env/rabbitmq.env
 
 DOMAIN=${1:-magento.test}
 
-docker-compose exec -T phpfpm bin/magento setup:install \
+./bin/docker-compose exec -T phpfpm bin/magento setup:install \
   --db-host="$MYSQL_HOST" \
   --db-name="$MYSQL_DATABASE" \
   --db-user="$MYSQL_USER" \

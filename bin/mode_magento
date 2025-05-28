@@ -10,18 +10,18 @@ read MODO
 case $MODO in
     "0")
         echo "MODO ACTUAL"
-        docker-compose exec -T phpfpm bin/magento deploy:mode:show
+        ./bin/docker-compose exec -T phpfpm bin/magento deploy:mode:show
         ;;
     "1")
         echo "CAMBIANDO A MODO DEFAULT"
-        docker-compose exec -T phpfpm bin/magento deploy:mode:set default
+        ./bin/docker-compose exec -T phpfpm bin/magento deploy:mode:set default
         ;;
     "2")
         echo "CAMBIANDO A MODO DEVELOPER"
-        docker-compose exec -T phpfpm bin/magento deploy:mode:set developer
+        ./bin/docker-compose exec -T phpfpm bin/magento deploy:mode:set developer
         ;;
     "3")
         echo "CAMBIANDO A MODO PRODUCTION"
-        docker-compose exec -T phpfpm bin/magento deploy:mode:set production
+        ./bin/docker-compose exec -T phpfpm bin/magento deploy:mode:set production
         ;;
 esac

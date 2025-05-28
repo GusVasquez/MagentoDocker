@@ -1,7 +1,7 @@
 #!/bin/bash
 DOMINIO=${1:-magento.test}
-VERSION=${2:-2.4.3-p1}
-EDITION=${3:-community}
+VERSION=${2:-2.4.6}
+EDITION=${3:-enterprise}
 
 #sudo rm -rf ./data/ && sudo rm -rf ./magento/
 

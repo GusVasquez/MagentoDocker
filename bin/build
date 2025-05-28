@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose build && docker-compose up -d
+./bin/docker-compose build && ./bin/docker-compose up -d
